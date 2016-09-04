@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'rolwiki.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'rol_db',
+        'USER': 'rol_db',
+        'PASSWORD': 'rolqazxsw',
+        'HOST': '',
+        'PORT': '',
     }
 }
+
 
 
 # Password validation
@@ -123,3 +128,5 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/turpialdos/webapps/rol_static'
