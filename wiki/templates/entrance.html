@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+	{{entrance.title}}
+{% endblock title %}
+{% block entitle %}
+	Parahumans
+{% endblock entitle %}
+{% block entrances %}
+	
+	{% for parahuman in entrance.parahumans.all %}
+		<li>
+			<a href="{% url 'parahuman' parahuman.pk %}">
+				{{parahuman.cape_name}}
+			</a>
+		</li>
+	{% endfor %}
+
+{% endblock entrances %}
+{% block content %}
+	<p>{{entrance.text}}</p>	
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+Parahumans	
+{% endblock title %}
+{% block subtitle %}
+	List of known parahumans
+{% endblock subtitle %}
+{% block content %}
+{% for parahuman in parahuman_list %}
+	
+	<li><a href="{%url 'parahuman' parahuman.pk %}">{{parahuman.cape_name}}</a></li>
+
+{% endfor %}	
+{% endblock content %}
