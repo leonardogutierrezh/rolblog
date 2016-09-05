@@ -6,7 +6,9 @@
 <p>{{parahuman.description}}</p>	
 {% endblock content %}
 
-
+{% block entitle %}
+	Entrances
+{% endblock entitle %}
 {% block entrances %}
 	{% for entrance in parahuman.entrances.all %}
 		<li><a href="{% url 'entrance' entrance.pk %}">{{entrance.title}}</a></li>
